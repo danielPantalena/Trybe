@@ -1,4 +1,4 @@
-let n = 11;
+let n = 83;
 let result = null;
 
 for (let i = 2; i <= n / 2 + 1; i++) {
@@ -10,4 +10,4 @@ for (let i = 2; i <= n / 2 + 1; i++) {
         result = "É primo";
     }
 }
-console.log(n + " " + result)
+console.log(n + " " + result);

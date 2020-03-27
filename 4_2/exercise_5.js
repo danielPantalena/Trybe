@@ -1,4 +1,4 @@
-let n = 11;
+let n = 7;
 let spaceOut = " ".repeat((n - 1) / 2)
 let base = "*".repeat(n)
 

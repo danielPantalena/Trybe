@@ -11,4 +11,4 @@ for (let i = 3; i <= n - 2; i += 2) {
     console.log(spaceOut + "*" + spaceIn + "*" + spaceOut);
 }
 // Base of triangle
-console.log(base);
+console.log(base); 

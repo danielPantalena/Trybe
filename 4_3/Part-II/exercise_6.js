@@ -1,5 +1,3 @@
-let x = 2;
-
 function sumUntil(n) {
     let result = null;
     for (let i = 1; i <= n; i += 1) {
@@ -8,4 +6,4 @@ function sumUntil(n) {
     return result
 }
 
-console.log(sumUntil(x));
+console.log(sumUntil(5));

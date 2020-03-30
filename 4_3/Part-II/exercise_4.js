@@ -1,13 +1,13 @@
-function theLargestIs (array) {
+arr = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']
+
+function theLargestIs(array) {
     let result = array[0];
-    for (let element in array) {
-        if (element.length > result.length) {
-            result = element;
+    for (let i = 1; i < array.length; i++) {
+        if (array[i].length > result.length) {
+            result = array[i];
         }
     }
     return result;
 }
 
-arr = ['Daniel', 'Fenandoooooo', 'Mari']
-
-console.log(theLargestIs(arr))
+console.log(theLargestIs(arr));

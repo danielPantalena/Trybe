@@ -8,4 +8,4 @@ function verificaFimPalavra(str, strEnd) {
     return result;
 }
 
-console.log(verificaFimPalavra("trybe", "be"))
+console.log(verificaFimPalavra("trybe", "be"));

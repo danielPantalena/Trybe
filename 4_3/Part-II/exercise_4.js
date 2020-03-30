@@ -1,4 +1,4 @@
-arr = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']
+arr = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 
 function theLargestIs(array) {
     let result = array[0];

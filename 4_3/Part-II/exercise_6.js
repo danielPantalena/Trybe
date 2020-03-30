@@ -3,7 +3,7 @@ function sumUntil(n) {
     for (let i = 1; i <= n; i += 1) {
         result += i;
     }
-    return result
+    return result;
 }
 
 console.log(sumUntil(5));

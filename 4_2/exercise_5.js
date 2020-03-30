@@ -8,7 +8,7 @@ console.log(spaceOut + "*");
 for (let i = 3; i <= n - 2; i += 2) {
     spaceOut = " ".repeat((n - i) / 2);
     let spaceIn = " ".repeat(n - spaceOut.length * 2 - 2);
-    console.log(spaceOut + "*" + spaceIn + "*" + spaceOut);
+    console.log(spaceOut + "*" + spaceIn + "*");
 }
 // Base of triangle
-console.log(base); 
+console.log(base);

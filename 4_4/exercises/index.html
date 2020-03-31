@@ -39,18 +39,29 @@
       </div>
     </div>
     <script>
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
- Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
- Crie uma função que mude a cor do quadrado vermelho para branco.
- Crie uma função que corrija o texto da tag <h1>.
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
+//         
+//         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+//         - document.getElementById()
+//         - document.getElementsByClassName()
+//         - document.getElementsByTagName()
+//  Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+      document.getElementsByTagName("p")[0].innerHTML = "Em 2 anos espero estar contratado como Dev"
+
+//  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+      document.getElementsByClassName("main-content")[0].style.backgroundColor = "#0fa36b";
+
+//  Crie uma função que mude a cor do quadrado vermelho para branco.
+      document.getElementsByClassName("center-content")[0].style.backgroundColor = "white";
+
+//  Crie uma função que corrija o texto da tag <h1>.
+      document.getElementsByTagName("h1")[0].innerHTML = "Exercise 4.4 - JavaScript";
+      
+//  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      let paragraph = document.getElementsByTagName("p")[0];
+      paragraph.innerHTML = paragraph.innerHTML.toUpperCase();  
+
+//  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+               
     </script>
   </body>
 </html>

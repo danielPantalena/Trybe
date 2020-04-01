@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 4.5</title>
     <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
-      .title {
-        text-align: center;
-      }
+        div {
+            border-color: black;
+            border-style: solid;
+        }
 
-      .main-content {
-        background-color: yellow;
-      }
+        .title {
+            text-align: center;
+        }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+        .main-content {
+            background-color: yellow;
+        }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
+        .main-content .center-content p {
+            font-style: italic;
+        }
 
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
 
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
 
-      .main-content .description {
-        text-align: center;
-      }
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+        // COLOQUE SEU CÓDIGO AQUI
         // 1
         let title = document.createElement("h1");
         title.innerHTML = "Exercise 4.5 - JavaScript DOM";
@@ -107,12 +110,30 @@
             divMain.appendChild(littleTitle);
         }
 
-        
+        // SECOND PART
 
+        // 1
+        title.className = "title";
 
+        // 2
+        for (i = 0; i < 3; i += 1) {
+            document.getElementsByTagName("h3")[i].className = "description"
+        }
 
+        // 3
+        divMain.removeChild(divLeft);
 
+        // 4
+        divRight.style.marginRight = "auto";
+
+        // 5
+        divCenterContent.parentNode.style.backgroundColor = "green"
+
+        // 6
+        uList.removeChild(uList.lastChild);
+        uList.removeChild(uList.lastChild);
 
     </script>
-  </body>
+</body>
+
 </html>

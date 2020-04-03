@@ -12,12 +12,12 @@
 
     <script>
         //let img = document.getElementsByTagName("img")[0];
-        let img = document.querySelector("img");
+        let img = document.querySelector("img");  
+        img.style.left = -img.width + "px";
         console.log(img)
 
-        img.style.left = -img.width + "px";
-
-        let walkForwards = true; // Variable for Bonus 2
+        //let walkForwards = true; // Variable for bonus 2
+        let speed = 10; // Variable for Bonus 2.second way
 
         function moveCat() {
             // Exercise 5
@@ -29,22 +29,34 @@
             //     img.style.left = -img.width + "px";
 
             // Bonus 2
-            let pixelsWalked = parseInt(img.style.left);
-            if (walkForwards && pixelsWalked >= (window.innerWidth - img.width))
-                walkForwards = false;
-            if (!walkForwards && pixelsWalked <= 0 )
-                walkForwards = true;
+            // let pixelsWalked = parseInt(img.style.left);
+            // if (walkForwards && pixelsWalked >= (window.innerWidth - img.width))
+            //     walkForwards = false;
+            // if (!walkForwards && pixelsWalked <= 0 )
+            //     walkForwards = true;
 
-            if (walkForwards) {
-                img.style.left = pixelsWalked + 10 + "px";
-                img.style.webkitTransform = "scaleX(+1)"}
-            else {
-                img.style.left = pixelsWalked - 10 + "px";
-                img.style.webkitTransform = "scaleX(-1)"
+            // if (walkForwards) {
+            //     img.style.left = pixelsWalked + 10 + "px";
+            //     img.style.webkitTransform = "scaleX(+1)"}
+            // else {
+            //     img.style.left = pixelsWalked - 10 + "px";
+            //     img.style.webkitTransform = "scaleX(-1)"
+            // }
+
+            // Bonus 2.second way
+            let pixelsWalked = parseInt(img.style.left);
+            if (pixelsWalked <= -img.width) {
+                speed = 10;
+                img.style.webkitTransform = "scaleX(1)"
             }
+            if (pixelsWalked >= window.innerWidth) {
+                speed = -10;
+                img.style.webkitTransform = "scaleX(-1)"
+            } 
+            img.style.left = pixelsWalked + speed + "px";
         } 
         
-        window.setInterval(moveCat, 50);
+        window.setInterval(moveCat, 60);
 
     </script>
 </body>

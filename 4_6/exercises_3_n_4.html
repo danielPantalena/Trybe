@@ -6,15 +6,6 @@
     <!-- load css from jsweb -->
     <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/jsweb.css" />
-
-
-
-    <!-- JavaScript could go up here -->
-    <!-- JavaScript could go up here -->
-    <!-- JavaScript could go up here -->
-
-
-
 </head>
 
 <body>
@@ -31,7 +22,9 @@
                 have the button, when clicked, open an <b>alert()</b> box which says &quot;You clicked the button&quot;.
 
                 <div class="exampleblock">
+                    <!-- Add code down here -->
                     <button id="button" onclick="alert('You clicked :D')">A Button, click here :)</button>
+                    <!-- Add code up here -->
                 </div>
 
                 <h2>Task 2</h2>
@@ -41,19 +34,22 @@
                     should assign it the value <b>39.99</b>. The second should declare a new variable called
                     <b>discount</b> and assign it the value 0.20.</p>
 
-                <p id="bigP">Add a HTML button below the &lt;script&gt; tag. Give this button an <b>onClick</b> event handler.
+                <p id="bigP">Add a HTML button below the &lt;script&gt; tag. Give this button an <b>onClick</b> event
+                    handler.
                     When the button is clicked it should multiply <b>gamePrice</b> by <b>discount</b> and present an
                     alert box containing the phrase &quot;&pound;(result) off!&quot;. You will need <a
                         href="http://nptcstudents.co.uk/andrewg/jsweb/maths.html" target="_blank">concatenation</a> to
                     achieve this.</p>
 
+                <!-- Add code down here -->
                 <script language="javascript" type="text/javascript">
                     let gamePrice = 39.99;
                     let discount = 0.20;
                 </script>
 
-                <button id="button2" onclick="alert('£ ' + (gamePrice * discount).toFixed(2) + ' off')">Another Button</button>
-
+                <button id="button2" onclick="alert('£ ' + (gamePrice * discount).toFixed(2) + ' off')">Another
+                    Button</button>
+                <!-- Add code up here -->
 
                 <p>You may want to consider using JavaScript's built in <a
                         href="http://www.w3schools.com/js/js_obj_math.asp" target="_blank">Maths object</a> to round the
@@ -72,8 +68,23 @@
                         </p>
                     </li>
                 </ol>
-            </p>
 
+            <!-- Add code down here -->
+                <img src="img/white-trybe" alt="Trybe Image" class="image" width="200px">
+            </p>
+            <script>
+                let img = document.querySelector(".image");
+                console.log(img);
+
+                img.addEventListener("mouseover", function () {
+                    img.src = "img/black-trybe"
+                })
+
+                img.addEventListener("mouseout", function () {
+                    img.src = "img/white-trybe"
+                })
+            </script>
+            <!-- Add code up here -->
 
         </div>
     </div>

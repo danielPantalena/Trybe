@@ -5,20 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem Ipsum</title>
-    <style>
-        body {
-            background-color: aqua;
-            
-            font-size: 50px;
-            line-height: 12px;
-            font-family: Arial, Helvetica, sans-serif;
+    <script>
+        if (localStorage.backgroundColor != null) {
+            console.log(localStorage.backgroundColor)
+            document.body.style.backGround = localStorage.backgroundColor;
         }
-
-        #title {
-            font-size: 3em;
-        }
-    </style>
-
+    </script>
 </head>
 
 <body>
@@ -27,8 +19,34 @@
         <h1 id="title">Lorem Ipsum!</h1>
         <p>Nulla venenatis volutpat nisl in lobortis</p>
     </header>
+    <!-- Inputs -->
+    <section id="inputs">
+        <!-- Background color input -->
+        <div class="textEntry">
+            Type a color for the background: <input type="text" id="background-input" autocomplete="off">
+            <button id="background-button">Change and store!</button>
+        </div>
 
-    
+        <!-- Color input -->
+        <div class="textEntry">
+            Type a color for the text: <input type="text" id="color" autocomplete="off">
+        </div>
+
+        <!-- Font size input -->
+        <div class="textEntry">
+            Type a color for the background: <input type="text" id="font-size" autocomplete="off">
+        </div>
+
+        <!-- Line height input -->
+        <div class="textEntry">
+            Type a line height: <input type="text" id="line-height" autocomplete="off">
+        </div>
+
+        <!-- Font family input -->
+        <div class="textEntry">
+            Select a font: <input type="text" id="font-family" autocomplete="off">
+        </div>
+    </section>
 
     <article id="article">
         <section class="section">
@@ -79,11 +97,21 @@
     </article>
 
     <script>
-        window.onload = function() {
-            let body = document.body;
+        window.onload = function () {
             
+            let backGround = document.getElementById("background-input");
+            let color = document.getElementById("color");
+            let fontSize = document.getElementById("font-size");
+            let lineHeight = document.getElementById("line-height");
+            let fontFamily = document.getElementById("font-family");
 
-            
+            document.getElementById("background-button").addEventListener("click", function() {
+                document.body.style.backgroundColor = backGround.value;
+                localStorage.backgroundColor = backGround.value;
+            })
+
+
+
 
         }
     </script>

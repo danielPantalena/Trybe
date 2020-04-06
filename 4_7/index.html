@@ -6,17 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem Ipsum</title>
     <script src="app.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
     <style>
         * {
-            margin: 2px 2px 2px 2px;
-            padding: 2px 2px 2px 2px;
+            margin: 4px 4px 4px 4px;
+            padding: 4px 4px 4px 4px;]
         }
-
-        #button {
+        #settings {
+            margin: 10px 40px 10px 40px;
+            padding: 20px 20px 20px 100px;
+            border-radius: 2%;
+        }
+        .button {
+            margin-top: -80px;
+            margin-right: 200px;
             float: right;
-            margin-top: -100px;
-            margin-right: 100px;
+            width: 80px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10%;
+            box-shadow: -3px 3px black;
         }
+        .button:active {
+            margin-top: -77px;
+            margin-right: 203px;
+            box-shadow: 0px 0px black;
+            border: 2px solid black;
+            color: black;
+        }
+        #storeButton {
+            margin-top: -150px;
+        }
+  
     </style>
 </head>
 
@@ -26,7 +47,7 @@
         <h1 id="title">Lorem Ipsum!</h1>
         <p>Nulla venenatis volutpat nisl in lobortis</p>
     </header>
-    <button id="settingsButton">Settings</button>
+    <button id="settingsButton" class="button">Settings</button>
     <!-- Settings -->
     <section id="settings" style="display: none;">
         <!-- Background color input -->
@@ -51,9 +72,14 @@
 
         <!-- Font family input -->
         <div class="textEntry">
-            Select a font: <input type="text" id="font-family" autocomplete="on">
+            Select a font: <input id="font-family" list="fonts" autocomplete="off">
+                <datalist id="fonts">
+                    <option value="helvetica"></option>
+                    <option value="MontSerrat"></option>
+                    <option value="Roboto"></option>
+                </datalist>
         </div>
-        <button id="storeButton">Store!</button>
+        <button id="storeButton" class="button">Store!</button>
     </section>
 
     <article id="article">

@@ -53,12 +53,17 @@ window.onload = function () {
         document.getElementById("article").style.lineHeight = lineHeight.value + "px";
     })
 
+    fontFamily.addEventListener("keyup", function() {
+        document.body.style.fontFamily = fontFamily.value;
+        fontFamily.value = '';
+    })
+
 
     document.getElementById("storeButton").addEventListener("click", function () {
         localStorage.backgroundColor = backGround.value;
         localStorage.color = color.value;
         localStorage.fontSize = fontSize.value;
         localStorage.lineHeight = lineHeight.value;
-        localStorage.fontFamily = fontFamily.value;
+        localStorage.fontFamily = document.body.style.fontFamily;
     })
 }

@@ -11,10 +11,10 @@
             margin: 2px 2px 2px 2px;
             padding: 2px 2px 2px 2px;
         }
+
         #button {
             float: right;
-            width: 150px;
-            height: 100px;
+            margin-top: -100px;
             margin-right: 100px;
         }
     </style>
@@ -26,34 +26,34 @@
         <h1 id="title">Lorem Ipsum!</h1>
         <p>Nulla venenatis volutpat nisl in lobortis</p>
     </header>
-
-    <button id="button">Change and store!</button>
-    <!-- Inputs -->
-    <section id="inputs">
+    <button id="settingsButton">Settings</button>
+    <!-- Settings -->
+    <section id="settings" style="display: none;">
         <!-- Background color input -->
         <div class="textEntry">
-            Type a color for the background: <input type="text" id="background-input" autocomplete="off">
+            Select a color for the background: <input id="background-input" type="color" autocomplete="on">
         </div>
 
         <!-- Color input -->
         <div class="textEntry">
-            Type a color for the text: <input type="text" id="color" autocomplete="off">
+            Select a color for the text: <input id="color" type="color" autocomplete="on">
         </div>
 
         <!-- Font size input -->
         <div class="textEntry">
-            Type a number of pixels for font: <input type="text" id="font-size" autocomplete="off">
+            Select a number of pixels for font: <input id="font-size" type="number" step= "0.5">
         </div>
 
         <!-- Line height input -->
         <div class="textEntry">
-            Type a line height: <input type="text" id="line-height" autocomplete="off">
+            Select a number of pixels for line height: <input id="line-height" type="number" step= "0.5">
         </div>
 
         <!-- Font family input -->
         <div class="textEntry">
             Select a font: <input type="text" id="font-family" autocomplete="on">
         </div>
+        <button id="storeButton">Store!</button>
     </section>
 
     <article id="article">

@@ -9,11 +9,12 @@
 
 <body>
     <form action="" method="GET">
-        <fieldset>
+        <fieldset id='fieldset'>
             <label for="name">Name:</label>
             <input id="name" type="text" required="required" maxlength="40"> <br>
             <label for="email">E-mail:</label>
-            <input type="text" name="email" id="email" required="required" maxlength="50"> <br>
+            <input type="text" name="email" id="email" required="required" maxlength="50"> 
+            <br id='after-email'>
             <label for="cpf">CPF:</label>
             <input type="text" name="cpf" id="cpf" required="required" maxlength="11"> <br>
             <label for="adress">Adress:</label>
@@ -52,10 +53,13 @@
                 <option value="TO">TO</option>
             </select>
             <p>Home:</p>
-            <label for="house"><input type="radio" id="house" value="house">House</label>
-            <label for="apartment"><input type="radio" id="apartment" value="apartment">Apartment</label>
-            
-
+            <!-- ??????????? Como deixar obrigatório ?????????? -->
+            <label for="house">
+                <input type="radio" id="house" value="house">House
+            </label>
+            <label for="apartment">
+                <input type="radio" id="apartment" value="apartment">Apartment
+            </label>
         </fieldset>
     </form>
 

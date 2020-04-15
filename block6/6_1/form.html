@@ -2,70 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercises 6.1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises 6.1</title>
 </head>
 
 <body>
-    <form action="" method="GET">
-        <fieldset id='fieldset'>
-            <label for="name">Name:</label>
-            <input id="name" type="text" required="required" maxlength="40"> <br>
-            <label for="email">E-mail:</label>
-            <input type="text" name="email" id="email" required="required" maxlength="50"> 
-            <br id='after-email'>
-            <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" id="cpf" required="required" maxlength="11"> <br>
-            <label for="adress">Adress:</label>
-            <input type="text" name="adress" id="adress" required="required" maxlength="200"> <br>
-            <label for="city">City:</label>
-            <input type="text" name="city" id="city" required="required" maxlength="28"> <br>
-            <label for="state">State:</label>
-            <select name="state" id="state" required="required">
-                <option value="" selected="selected">Selecione</option>
-                <option value="AC">AC</option>
-                <option value="AL">AL</option>
-                <option value="AP">AP</option>
-                <option value="AM">AM</option>
-                <option value="BA">BA</option>
-                <option value="CE">CE</option>
-                <option value="DF">DF</option>
-                <option value="ES">ES</option>
-                <option value="GO">GO</option>
-                <option value="MA">MA</option>
-                <option value="MT">MT</option>
-                <option value="MS">MS</option>
-                <option value="MG">MG</option>
-                <option value="PA">PA</option>
-                <option value="PB">PB</option>
-                <option value="PR">PR</option>
-                <option value="PE">PE</option>
-                <option value="PI">PI</option>
-                <option value="RJ">RJ</option>
-                <option value="RN">RN</option>
-                <option value="RS">RS</option>
-                <option value="RO">RO</option>
-                <option value="RR">RR</option>
-                <option value="SC">SC</option>
-                <option value="SP">SP</option>
-                <option value="SE">SE</option>
-                <option value="TO">TO</option>
-            </select>
-            <p>Home:</p>
-            <!-- ??????????? Como deixar obrigatório ?????????? -->
-            <label for="house">
-                <input type="radio" id="house" value="house">House
-            </label>
-            <label for="apartment">
-                <input type="radio" id="apartment" value="apartment">Apartment
-            </label>
-        </fieldset>
-    </form>
 
+  <form action="" method="GET">
+    <fieldset id='fieldset'>
+      <label for="name">Name:</label>
+      <input id="name" type="text" required="required" maxlength="40"> <br>
+      <label for="email">E-mail:</label>
+      <input type="text" name="email" id="email" required="required" maxlength="50">
+      <br id='after-email'>
+      <label for="cpf">CPF:</label>
+      <input type="text" name="cpf" id="cpf" required="required" maxlength="11"> <br>
+      <label for="adress">Adress:</label>
+      <input type="text" name="adress" id="adress" required="required" maxlength="200"> <br>
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city" required="required" maxlength="28"> <br>
+      <label for="state">State:</label>
+      <select name="state" id="state" required="required">
+        <option value="" selected="selected">Selecione</option>
+        <option value="AC">AC</option>
+        <option value="AL">AL</option>
+        <option value="AP">AP</option>
+        <option value="AM">AM</option>
+        <option value="BA">BA</option>
+        <option value="CE">CE</option>
+        <option value="DF">DF</option>
+        <option value="ES">ES</option>
+        <option value="GO">GO</option>
+        <option value="MA">MA</option>
+        <option value="MT">MT</option>
+        <option value="MS">MS</option>
+        <option value="MG">MG</option>
+        <option value="PA">PA</option>
+        <option value="PB">PB</option>
+        <option value="PR">PR</option>
+        <option value="PE">PE</option>
+        <option value="PI">PI</option>
+        <option value="RJ">RJ</option>
+        <option value="RN">RN</option>
+        <option value="RS">RS</option>
+        <option value="RO">RO</option>
+        <option value="RR">RR</option>
+        <option value="SC">SC</option>
+        <option value="SP">SP</option>
+        <option value="SE">SE</option>
+        <option value="TO">TO</option>
+      </select>
+      <p>Home:</p>
+      <!-- ??????????? Como deixar obrigatório ?????????? -->
+      <label for="house">
+        <input type="radio" id="house" value="house">House
+      </label>
+      <label for="apartment">
+        <input type="radio" id="apartment" value="apartment">Apartment
+      </label>
 
-    <script src="script.js"></script>
+    </fieldset>
 
+    <fieldset id="fieldset2">
+      <label for="cv">resume: </label>
+      <textarea name="cv" id="cv" cols="30" rows="10" maxlength="1000" required="required"></textarea> <br>
+      <label for="cargo">cargo: </label>
+      <input type="text" name="cargo" id="cargo" required="required"> <br>
+      <label for="data">data de início:</label>
+      <input type="text" name="data" id="data" required="required"> <br id="after-data">
+
+    </fieldset>
+  </form>
+
+  <script src="script.js"></script>
 
 </body>
 

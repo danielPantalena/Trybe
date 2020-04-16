@@ -42,7 +42,6 @@ const emailInput = document.getElementById('email');
 const validationEmailMessage = document.createElement('span');
 
 function validateEmail() {
-  // emailInput.pattern = regExpEmail;
   emailInput.addEventListener('input', () => {
     const validMessage = "It's a valid email :)";
     const notValidMessage = "It's <strong>NOT</strong> a valid email :/";
@@ -98,7 +97,7 @@ function allData() {
   const inputs = document.querySelectorAll('input');
   for (let i = 0; i < inputs.length; i += 1) {
     const title = document.createElement('span');
-    const text = document.createElement('p');
+    const text = document.createElement('span');
     title.innerHTML = `${inputs[i].name}: `;
     text.innerHTML = `${inputs[i].value} <br><br>`;
     allDataDiv.appendChild(title);
@@ -113,6 +112,6 @@ window.onload = () => {
   validateDate();
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
-    allData(fieldSet);
+    allData();
   });
 };

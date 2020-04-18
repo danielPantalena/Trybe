@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercises 6.1</title>
+    <title>Exercises 6.2</title>
     <!--Import Google Icon Font-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -21,8 +21,28 @@
   </head>
 
   <body>
-    <div class="row container">
-      <form class="col s12">
+    <nav style="padding: 0 4%; margin-bottom: 10px;">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Forms</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="https://materializecss.com/" target="_blank"
+              >Materialize</a
+            >
+          </li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+          <li>
+            <a href="https://danielpantalena.github.io" target="_blank"
+              ><i class="medium material-icons">contacts</i></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row z-depth-3" style="margin: 0 4%; padding: 0 2%;">
+      <form class="col s12" style="color: #ee6e73;">
+        <h3>Personal Data</h3>
         <div class="row">
           <!-- First Name -->
           <div class="input-field col s6">
@@ -53,39 +73,118 @@
         </div>
 
         <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate" />
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" />
+          <!-- Email -->
+          <div class="input-field col s6">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="validate"
+              maxlength="50"
+              required
+            />
             <label for="email">Email</label>
           </div>
+          <!-- CPF -->
+          <div class="input-field col s6">
+            <input
+              id="cpf"
+              name="CPF"
+              type="text"
+              class="validate"
+              required
+              maxlength="11"
+            />
+            <label for="cpf">CPF</label>
+          </div>
+        </div>
+        <!-- Adress -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              type="text"
+              name="adress"
+              id="adress"
+              required
+              maxlength="200"
+            />
+            <label for="adress">Adress</label>
+          </div>
+        </div>
+        <!-- City and State -->
+        <div class="row">
+          <div class="input-field col s6">
+            <input
+              type="text"
+              name="city"
+              id="city"
+              required="required"
+              maxlength="28"
+            />
+            <label for="city">City:</label>
+          </div>
+          <div class="input-field col s6">
+            <select name="state" id="state" required="required">
+              <option value="" selected="selected">Select</option>
+              <option value="AC">Acre</option
+              ><option value="AL">Alagoas</option
+              ><option value="AP">Amapá</option
+              ><option value="AM">Amazonas</option
+              ><option value="BA">Bahia</option
+              ><option value="CE">Ceará</option
+              ><option value="DF">Destrito Federal</option
+              ><option value="ES">Espirito Santo</option
+              ><option value="GO">Goiás</option
+              ><option value="MA">Maranhão</option
+              ><option value="MT">Mato Grosso</option
+              ><option value="MS">Mato Grosso do Sul</option
+              ><option value="MG">Minas Gerais</option
+              ><option value="PA">Pará</option
+              ><option value="PB">Paraíba</option
+              ><option value="PR">Paraná</option
+              ><option value="PE">Pernambuco</option
+              ><option value="PI">Piauí</option
+              ><option value="RJ">Rio de Janeiro</option
+              ><option value="RN">Rio Grande do Norte</option
+              ><option value="RS">Rio Grande do Sul</option
+              ><option value="RO">Rondônia</option
+              ><option value="RR">Roraima</option
+              ><option value="SC">Santa Catrina</option
+              ><option value="SP">São Paulo</option
+              ><option value="SE">Sergipe</option
+              ><option value="TO">Tocantis</option>
+            </select>
+          </div>
+        </div>
+        <h3>Work Data</h3>
+        <!-- Resume -->
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea
+              class="materialize-textarea"
+              name="cv"
+              id="cv"
+              cols="30"
+              rows="10"
+              maxlength="1000"
+              required="required"
+            ></textarea>
+            <label for="cv">Resume: </label>
+          </div>
         </div>
         <div class="row">
-          <div class="col s12">
-            This is an inline input field:
-            <div class="input-field inline">
-              <input id="email_inline" type="email" class="validate" />
-              <label for="email_inline">Email</label>
-              <span class="helper-text" data-error="wrong" data-success="right"
-                >Helper text</span
-              >
-            </div>
+          <!-- Cargo -->
+          <div class="input-field col s6">
+            <input type="text" name="cargo" id="cargo" required="required" />
+            <label for="cargo">cargo: </label>
+          </div>
+          <!-- Date -->
+          <div class="input-field col s6">
+            <input type="text" name="data" id="data" required="required" />
+            <label for="data">data de início:</label>
           </div>
         </div>
       </form>
-    </div>
-    <div class="input-field col s12">
-      <select>
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>
-      <label>Materialize Select</label>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->

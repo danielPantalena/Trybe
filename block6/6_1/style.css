@@ -1,0 +1,23 @@
+body {
+  padding: 4%;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: rgba(235, 212, 212, 0.377);
+  border-radius: 5px;
+}
+
+label input {
+  width: 20px;
+}
+
+span {
+    margin-left: 10px;
+}
+
+fieldset {
+  padding: 40px 100px;
+  margin-bottom: 50px;
+}

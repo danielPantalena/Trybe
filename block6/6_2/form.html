@@ -18,18 +18,9 @@
       href="materialize/css/materialize.min.css"
       media="screen,projection"
     />
-    <!--Import jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--Import materialize.js-->
-    <script
-      type="text/javascript"
-      src="materialize/js/materialize.min.js"
-    ></script>
-    <!--Import internal js -->
-    <script type="text/javascript" src="script.js"></script>
   </head>
 
-  <body>
+  <body style="padding: 0 0 100px 0;">
     <nav style="padding: 0 4%; margin-bottom: 10px;">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Forms</a>
@@ -49,9 +40,9 @@
       </div>
     </nav>
 
-    <div class="row z-depth-3" style="margin: 0 4%; padding: 0 2%;">
-      <form class="col s12" style="color: #ee6e73;">
-        <h3>Personal Data</h3>
+    <div class="row z-depth-4" style="margin: 0 4%; padding: 0 2%;">
+      <form id="form" class="col s12" style="color: #ee6e73;">
+        <h4>Personal Data</h4>
         <!-- Name -->
         <div class="row">
           <!-- First Name -->
@@ -138,7 +129,7 @@
           <div class="input-field col s6">
             <select name="state" id="state" required="required">
               <option value="" disabled="disabled" selected>Select</option>
-              <option value="2">Acre</option>
+              <option value="AC">Acre</option>
               <option value="AL">Alagoas</option
               ><option value="AP">Amapá</option
               ><option value="AM">Amazonas</option
@@ -168,7 +159,7 @@
             </select>
           </div>
         </div>
-        <h3>Work Data</h3>
+        <h4>Work Data</h4>
         <!-- Resume -->
         <div class="row">
           <div class="input-field col s12">
@@ -196,7 +187,18 @@
             <label for="data">data de início:</label>
           </div>
         </div>
+        <button class="waves-effect waves-light btn" type="submit">Submit</button>
+        <button class="waves-effect waves-light btn red lighten-2">Apagar</button>
       </form>
     </div>
+    <!--Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Import materialize.js-->
+    <script
+      type="text/javascript"
+      src="materialize/js/materialize.min.js"
+    ></script>
+    <!--Import internal js -->
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ function submitForm(event) {
   event.preventDefault();
   const infos = event.target.elements;
   const resultsDiv = document.createElement('div');
-  resultsDiv.classList.add('container');
+  resultsDiv.className = "container z-depth-3"
   for (let i = 0; i < infos.length; i += 1) {
     if (infos[i].id !== '') {
       let resultChild = document.createElement('p');

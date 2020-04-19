@@ -67,26 +67,20 @@
           <!-- First Name -->
           <div class="input-field col s6">
             <input
-              id="first_name"
-              type="text"
               class="validate"
+              id="first_name"
               name="first_name"
-              required
-              pattern="[a-zA-Z]{3,20}"
-              maxlength="20"
+              type="text"
             />
             <label for="first_name">First Name</label>
           </div>
           <!-- Last Name -->
           <div class="input-field col s6">
             <input
-              id="last_name"
-              type="text"
               class="validate"
+              id="last_name"
               name="last_name"
-              required
-              pattern="[a-zA-Z]{3,20}"
-              maxlength="20"
+              type="text"
             />
             <label for="last_name">Last Name</label>
           </div>
@@ -95,25 +89,18 @@
         <div class="row">
           <!-- Email -->
           <div class="input-field col s6">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              class="validate"
-              maxlength="50"
-              required
-            />
+            <input class="validate" id="email" name="email" type="email" />
             <label for="email">Email</label>
           </div>
           <!-- CPF -->
           <div class="input-field col s6">
             <input
+              class="validate"
               id="cpf"
               name="CPF"
-              type="text"
-              class="validate"
-              required
               maxlength="11"
+              type="text"
+              pattern="\d{11}"
             />
             <label for="cpf">CPF</label>
           </div>
@@ -121,13 +108,7 @@
         <!-- Adress -->
         <div class="row">
           <div class="input-field col s12">
-            <input
-              type="text"
-              name="adress"
-              id="adress"
-              required
-              maxlength="200"
-            />
+            <input class="validate" id="adress" name="adress" type="text" />
             <label for="adress">Adress</label>
           </div>
         </div>
@@ -135,18 +116,12 @@
         <div class="row">
           <!-- City -->
           <div class="input-field col s6">
-            <input
-              type="text"
-              name="city"
-              id="city"
-              required="required"
-              maxlength="28"
-            />
+            <input class="validate" id="city" name="city" type="text" />
             <label for="city">City:</label>
           </div>
           <!-- State -->
           <div class="input-field col s6">
-            <select name="state" id="state" required="required">
+            <select name="state" id="state">
               <option value="" disabled="disabled" selected>Select</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option
@@ -178,6 +153,7 @@
             </select>
           </div>
         </div>
+        <!-- Home Radio -->
         <p>Home:</p>
         <p>
           <label>
@@ -192,33 +168,33 @@
           </label>
         </p>
         <br />
-
+        <!-- Word Data -->
         <h4>Work Data</h4>
         <!-- Resume -->
         <div class="row">
           <div class="input-field col s12">
             <textarea
-              class="materialize-textarea"
-              name="cv"
-              id="cv"
+              class="materialize-textarea validate"
               cols="30"
-              rows="10"
+              id="cv"
               maxlength="1000"
-              required="required"
+              name="cv"
+              rows="10"
             ></textarea>
             <label for="cv">Resume: </label>
           </div>
         </div>
+        <!-- Job Title and Date -->
         <div class="row">
-          <!-- Cargo -->
+          <!-- Job Title -->
           <div class="input-field col s6">
-            <input type="text" name="cargo" id="cargo" required="required" />
-            <label for="cargo">cargo: </label>
+            <input class="validate" name="jobTitle" type="text" />
+            <label for="cargo">Job Title: </label>
           </div>
           <!-- Date -->
           <div class="input-field col s6">
-            <input type="text" name="data" id="data" required="required" />
-            <label for="data">data de início:</label>
+            <input type="text" name="date" class="datepicker" type="date" />
+            <label for="date">date:</label>
           </div>
         </div>
         <button

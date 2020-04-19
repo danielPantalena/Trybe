@@ -6,19 +6,70 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.sidenav').sidenav();
 });
-// validation
-$(document).ready(() => {
-  $('form').validate({
-    rules: {
-      first_name: {
-        required: true,
-        maxlength: 100,
-        minlength: 5,
-      },
-    },
-  });
+// initialize date picker
+$(document).ready(function () {
+  $('.datepicker').datepicker();
 });
-
+// validation
+$('form').validate({
+  rules: {
+    first_name: {
+      required: true,
+      minlength: 5,
+      maxlength: 20,
+    },
+    last_name: {
+      required: true,
+      minlength: 5,
+    },
+    email: {
+      required: true,
+      email: true,
+      maxlength: 50,
+    },
+    CPF: {
+      required: true,
+      minlength: 11,
+      maxlength: 11,
+    },
+    adress: {
+      required: true,
+      maxlength: 200,
+    },
+    city: {
+      required: true,
+      maxlength: 28,
+    },
+    state: {
+      required: true,
+    },
+    home: {
+      required: true,
+    },
+    cv: {
+      required: true,
+      maxlength: 1000,
+    },
+    jobTitle: {
+      required: true,
+    },
+    date: {
+      date: true,
+      required: true,
+    },
+  },
+  errorElement: 'div',
+  errorPlacement: function (error, element) {
+    if (element[0].type !== 'radio') {
+      let placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error);
+      } else {
+        error.insertAfter(element);
+      }
+    }
+  },
+});
 // submit form
 function submitForm(event) {
   event.preventDefault();
@@ -27,7 +78,7 @@ function submitForm(event) {
   resultsDiv.className = 'container z-depth-3';
   resultsDiv.style.padding = '2% 2%';
   for (let i = 0; i < infos.length; i += 1) {
-    if (infos[i].name !== '') {
+    if (infos[i].name !== '' && infos[i].type !== 'submit') {
       if (infos[i].type === 'radio') {
         if (infos[i].checked) {
           let resultChild = document.createElement('P');

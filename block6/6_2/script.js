@@ -71,10 +71,13 @@ $('form').validate({
   },
 });
 // submit form
+const resultsDiv = document.createElement('div');
 function submitForm(event) {
   event.preventDefault();
+  while (resultsDiv.firstChild) {
+    resultsDiv.firstChild.remove();
+  }
   const infos = event.target.elements;
-  const resultsDiv = document.createElement('div');
   resultsDiv.className = 'container z-depth-3';
   resultsDiv.style.padding = '2% 2%';
   for (let i = 0; i < infos.length; i += 1) {
@@ -94,12 +97,7 @@ function submitForm(event) {
   }
   document.body.appendChild(resultsDiv);
 }
-// clear form
-function clearForm() {
-  location.reload();
-}
 
 window.onload = () => {
   document.getElementById('form').addEventListener('submit', submitForm);
-  document.getElementById('clear-button').addEventListener('click', clearForm);
 };

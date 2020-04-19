@@ -3,8 +3,20 @@ $(document).ready(function () {
   $('select').formSelect();
 });
 // initialize side nav
-$(document).ready(function(){
+$(document).ready(function () {
   $('.sidenav').sidenav();
+});
+// validation
+$(document).ready(() => {
+  $('form').validate({
+    rules: {
+      first_name: {
+        required: true,
+        maxlength: 100,
+        minlength: 5,
+      },
+    },
+  });
 });
 
 // submit form

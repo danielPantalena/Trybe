@@ -19,20 +19,25 @@
       media="screen,projection"
     />
     <!--Import internal CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body style="padding: 0 0 100px 0;">
+    <!-- Collapsible Navigator -->
     <nav class="z-depth-3" style="padding: 0 4%; margin-bottom: 10px;">
+      <!-- Navigator for computers -->
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Forms</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="#!" class="brand-logo">Forms</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
           <li>
             <a href="https://materializecss.com/" target="_blank"
               >Materialize</a
             >
           </li>
-          <li><a href="collapsible.html">JavaScript</a></li>
+          <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
           <li>
             <a href="https://danielpantalena.github.io" target="_blank"
               ><i class="medium material-icons">contacts</i></a
@@ -41,7 +46,19 @@
         </ul>
       </div>
     </nav>
-
+    <!-- Navigator for mobiles -->
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="https://materializecss.com/" target="_blank">Materialize</a>
+      </li>
+      <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+      <li>
+        <a href="https://danielpantalena.github.io" target="_blank"
+          ><i class="small material-icons">contacts</i></a
+        >
+      </li>
+    </ul>
+    <!-- form's container -->
     <div class="row z-depth-3 container" style="padding: 2% 2%;">
       <form id="form" class="col s12" style="color: #ee6e73;">
         <h4>Personal Data</h4>
@@ -161,7 +178,7 @@
             </select>
           </div>
         </div>
-        <P>Home:</P>
+        <p>Home:</p>
         <p>
           <label>
             <input name="home" type="radio" value="house" required />
@@ -174,8 +191,8 @@
             <span>Apartment</span>
           </label>
         </p>
-        <br>
-        
+        <br />
+
         <h4>Work Data</h4>
         <!-- Resume -->
         <div class="row">
@@ -204,12 +221,21 @@
             <label for="data">data de início:</label>
           </div>
         </div>
-        <button class="waves-effect waves-light btn" type="submit">Submit</button>
-        <button class="waves-effect waves-light btn red lighten-2">Clear</button>
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <a id="clear-button" class="waves-effect waves-light btn">Clear</a>
       </form>
     </div>
     <!--Import jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Import jQuery validate-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <!--Import materialize.js-->
     <script
       type="text/javascript"

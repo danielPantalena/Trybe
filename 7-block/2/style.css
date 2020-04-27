@@ -1,0 +1,13 @@
+p {
+    animation-duration: 3s;
+    animation-name: opacityInOut;
+}
+
+@keyframes opacityInOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

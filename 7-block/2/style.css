@@ -1,10 +1,67 @@
 #exercise-1 {
-  animation: excs1 5s ease 1s;
+  animation: excs 3s ease 1s;
+  /* = animation-name: excs;
+       animation-duration: 3s;
+       animation-timing-function: ease;
+       animation-delay: 1s; */
 }
 
-@keyframes excs1 {
+#exercise-2 {
+  animation: excs 2s ease 2s 1 normal forwards;
+  /* animation-name: excs;
+     animation-duration: 2s;
+     animation-timing-function: ease;
+     animation-delay: 2s;
+     animation-iteration-count: 1;
+     animation-direction: normal;
+     animation-fill-mode: forwards; */
+}
+
+#exercise-3 {
+  animation: excs 1s ease 1s 2 alternate;
+}
+
+#exercise-4 {
+  animation: excs 5s;
+  animation-play-state: paused;
+}
+
+#exercise-4:hover {
+  animation-play-state: running;
+}
+
+#exercise-5 {
+  animation: excs 5s;
+  animation-play-state: paused;
+}
+
+#section-5:hover #exercise-5 {
+  animation-play-state: running;
+}
+
+@keyframes excs {
+  from {
+    margin-left: 0;
+  }
   to {
     margin-left: 90%;
   }
 }
+
+#exercise-6 {
+  position: relative;
+  animation: exc6 1s ease 0s 1;
+  animation-play-state: paused;
+}
+
+#exercise-6-square:hover + #exercise-6 {
+  animation-play-state: running;
+}
+
+@keyframes exc6 {
+  to {
+    margin-right: 84%;
+  }
+}
+
 

@@ -29,7 +29,6 @@ function animateCards() {
     if (e.target == cardsContainer) return null;
     else if (e.target.className != '') return null;
     e.target.classList.add(randomPick(animations));
-    console.log(e.target);
     setTimeout(() => {
       resetAnimation(e.target);
     }, 1500);

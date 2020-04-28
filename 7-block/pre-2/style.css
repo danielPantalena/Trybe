@@ -1,0 +1,35 @@
+p {
+  animation: opacityInOut 3s; 
+  /* animation-name: opacityInOut; */
+  /* animation-duration: 3s; */
+}
+
+@keyframes opacityInOut {
+  from {
+    opacity: 0;
+    font-size: 0.5em;
+  }
+  60% {
+    font-size: 1.1em;
+  }
+  to {
+    opacity: 1;
+    font-size: 1em;
+  }
+}
+
+p + p {
+  /* animation-duration: 5s; */
+  /* animation-name: slide; */
+  animation: slide 5s ease-in;
+  animation-direction: reverse;
+}
+
+@keyframes slide {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 90%;
+  }
+}

@@ -1,8 +1,31 @@
 body {
-    background-color: rgba(8, 24, 8, 0.836);
-    padding: 2%;
+  background-color: rgba(8, 24, 8, 0.836);
+  padding: 2%;
+}
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
 }
 
 img {
-    width: 100px;
+  width: 12%;
+	margin: 1%;
+	transition: all 1500ms;
+}
+
+.rotate {
+	transform: rotate(360deg);
+}
+
+.grow {
+	transform: scale(2);
+}
+
+.flip {
+	transform: scale(1.5) rotateY(360deg);
+}
+
+.front-flip {
+	transform: scale(1.5) rotateX(360deg);
 }

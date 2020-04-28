@@ -32,11 +32,9 @@ function animateCards() {
     console.log(e.target);
     setTimeout(() => {
       resetAnimation(e.target);
-      console.log(e.target);
     }, 1500);
   });
 }
-
 window.onload = function () {
   this.pickCard();
   this.animateCards();

@@ -4,28 +4,28 @@ body {
 }
 
 .container {
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 img {
   width: 12%;
-	margin: 1%;
-	transition: all 1500ms;
+  margin: 1%;
+  transition: all 1500ms;
 }
 
 .rotate {
-	transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .grow {
-	transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .flip {
-	transform: scale(1.2) rotateY(360deg);
+  transform: scale(1.2) rotateY(360deg);
 }
 
 .front-flip {
-	transform: scale(1.2) rotateX(360deg);
+  transform: scale(1.2) rotateX(360deg);
 }

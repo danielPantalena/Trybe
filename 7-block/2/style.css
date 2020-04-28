@@ -85,11 +85,78 @@
   }
 }
 
+#exercise-9 {
+  animation: exc9 4s ease 0s infinite alternate;
+}
 
-  /* animation-name: excs;
-     animation-duration: 2s;
-     animation-timing-function: ease;
-     animation-delay: 2s;
-     animation-iteration-count: 1;
-     animation-direction: normal;
-     animation-fill-mode: forwards; */
+@keyframes exc9 {
+  33% {
+    background-color: yellow;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+#exercise-10 {
+  animation: exc10 4s ease 0s infinite alternate;
+}
+
+@keyframes exc10 {
+  33% {
+    background-color: yellow;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#exercise-11_1 {
+  animation: exc11 3s linear 2s infinite;
+}
+
+#exercise-11_2 {
+  animation: exc11 3s ease 2s infinite;
+}
+
+#exercise-11_3 {
+  animation: exc11 3s ease-in 2s infinite;
+}
+
+#exercise-11_4 {
+  animation: exc11 3s ease-out 2s infinite;
+}
+
+#exercise-11_5 {
+  animation: exc11 3s ease-in-out 2s infinite;
+}
+
+@keyframes exc11 {
+  to {
+    margin-left: 100%;
+  }
+}
+
+#exercise-12 {
+  animation: exc12 1s ease 0s 1 normal forwards;
+  animation-play-state: paused;
+}
+
+#exercise-12:active {
+  animation: exc12 1s ease 0s 1 normal forwards;
+  animation-play-state: running;
+}
+
+@keyframes exc12 {
+  to {
+    opacity: 0;
+  }
+}

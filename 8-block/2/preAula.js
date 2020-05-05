@@ -39,31 +39,17 @@ console.log();
 console.log('student2:');
 showSkills(student2);
 
-
 // Object.values()
 // Return a array with the values of the object
-const student = {
+const student3 = {
   Html: 'Muito Bom',
   Css: 'Bom',
   JavaScript: 'Ótimo',
   SoftSkill: 'Ótimo',
 };
 
-const listSkillsWithFor = (student) => {
-  console.log(student);
-  const skills = [];
-  for(skill in student) {
-    console.log(skill);
-    skills.push(student[skill]);
-  }
+function objValues(obj) {
+  return Object.values(obj);
+}
 
-  return skills;
-};
-
-  const listSkillsWithValues = (student) => Object.values(student);
-
-Sem Object.values
-console.log(listSkillsWithFor(student));
-
-  // Com Object.values
-  console.log(listSkillsWithValues(student));
+console.log(objValues(student3));

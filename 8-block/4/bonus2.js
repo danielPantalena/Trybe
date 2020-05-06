@@ -2,14 +2,10 @@ const assert = require('assert');
 
 // escreva a função removeMiddle para passar nos testes abaixo:
 const removeMiddle = (arr) => {
-  let outAndIn = [];
-  for (let i = 0; i <= Math.ceil(arr.length / 2); i++) {
-    outAndIn.unshift(arr.pop());
-  }
-  for (let i = 1; i < outAndIn.length; i++) {
-    arr.push(outAndIn[i]);
-  }
-  return [outAndIn[0]];
+  const index = Math.floor(arr.length / 2);
+  const result = arr[index];
+  arr.splice(index, 1);
+  return [result];
 };
 // ============================================================
 

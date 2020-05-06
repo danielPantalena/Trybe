@@ -40,11 +40,16 @@ function objValues(obj) {
 }
 
 // 5
-const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
-const allLessonsWithSpread = {...{lesson1, lesson2, lesson3}};
-// const allLessonsWithOutScope = Object.assign({}, lesson1, lesson2, lesson3);
-// console.log(allLessonsWithOutScope);
-
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 }); // Clone
+const allLessonsWithSpread = { ...lesson1, ...lesson2, ...lesson3 }; // The same result
+const allLessonsWithOutScope = Object.assign({}, lesson1, lesson2, lesson3); // Diferent result
+// Copy
+const allLessonsCopy = {
+  lesson1: { ...lesson1 },
+  lesson2: { ...lesson2 },
+  lesson3: { ...lesson3 },
+};
+console.log(allLessonsWithSpread);
 
 // 6
 function numberOfStudents(obj) {
@@ -55,4 +60,35 @@ function numberOfStudents(obj) {
   return totalNumber;
 }
 
+// 7
+const getValueByIndex = (obj, index) => obj[Object.keys(obj)[index]];
 
+// 8
+const findPair = (obj, key, value) => (obj[key] === value ? true : false);
+
+// Bonus
+// 1
+const mathStudents = (obj) => {
+  let result = 0;
+  for (let key in obj) {
+    if (obj[key].materia === 'Matemática') result += obj[key].numeroEstudantes;
+  }
+  return result;
+};
+
+// 2
+const createReport = (obj, teacher) => {
+  let arrayClass = [];
+  let students = 0;
+  const report = {};
+  for (let key in obj) {
+    if (obj[key].professor === teacher) {
+      arrayClass.push(obj[key].materia);
+      students += obj[key].numeroEstudantes;
+    }
+  }
+  report.professor = teacher;
+  report.aulas = arrayClass;
+  report.estudantes = students;
+  return report;
+};

@@ -1,12 +1,7 @@
 const assert = require('assert');
 
 // escreva a função findTheNeedle para passar nos testes abaixo:
-const findTheNeedle = (arr, word) => {
-  for (let i in arr) {
-    if (arr[i] === word) return Number(i);
-  }
-  return -1;
-};
+const findTheNeedle = (arr, word) => arr.indexOf(word);
 // =============================================================
 
 let words = ['house', 'train', 'slide', 'needle', 'book'];

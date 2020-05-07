@@ -1,13 +1,7 @@
 const assert = require('assert');
 
 // escreva a função addAllnumbers para passar nos testes abaixo:
-const addAllnumbers = (arr) => {
-  let result = 0;
-  for (let num of arr) {
-    result += num;
-  }
-  return result;
-};
+const addAllnumbers = (arr) => arr.reduce((total, num) => (total += num));
 // ============================================================
 
 const numbers = [9, 23, 10, 3, 8];

@@ -1,11 +1,8 @@
 const assert = require('assert');
 
-const greaterThanTen = (arr) => {
-  let result = [];
-  arr.map((n) => (n > 10 ? result.push(n) : ''));
-  return result;
-};
-
+// ===================================================================================
+let greaterThanTen = a => a.reduce((r, n) => {n > 10 ? r.push(n) : ''; return r;}, []);
+// ===================================================================================
 
 const parameter = [4, 10, 32, 9, 21];
 const result = [32, 21];

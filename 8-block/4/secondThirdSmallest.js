@@ -1,13 +1,8 @@
 const assert = require('assert');
 
-function secondThirdSmallest(array) {
-  let results = [];
-  array.sort((x, y) => x - y);
-  results = [array[1], array[2]];
-  return results;
-}
-
-secondThirdSmallest([10, 11, 1, 2, 3]);
+// ================================================================
+const secondThirdSmallest = (arr) => [arr.sort((x, y) => x - y)[1], arr[2]];
+// ================================================================
 
 const parameter = [4, 10, 32, 9, 21, 90, 5, 11, 8, 6];
 const result = [5, 6];
@@ -18,4 +13,4 @@ e, caso não esteja, altere o código para que ele passe nos testes.
 Lembre-se: testes pequenos e numerosos! Escreva um por vez e vá corrigindo
 a função aos poucos:
 */
-assert.deepStrictEqual(secondThirdSmallest(parameter), result)
+assert.deepStrictEqual(secondThirdSmallest(parameter), result);

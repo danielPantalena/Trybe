@@ -67,7 +67,7 @@ const expected_result = 'O Senhor dos Anéis';
 
 // escreva seu código aqui
 const authorWith3DotsOnName = () =>
-  books.find((b) => /^\w\.\s\w\.\s\w\./.test(b.author.name)).name;
+  books.find((b) => /^[A-Z]\.\s[A-Z]\.\s[A-Z]\./.test(b.author.name)).name;
 // ========================
 
 assert.deepEqual(authorWith3DotsOnName(), expected_result);

@@ -63,12 +63,50 @@ const books = [
   },
 ];
 
-function smallerName() {
-  let min = 'aaaaaaaaaaaaaaaaaaaaaaaaaaa';
-  // escreva aqui o seu código
-  books.forEach((obj) => (obj.name.length < min.length ? (min = obj.name) : min));
-  // Variável nameBook que receberá o valor do menor nome;
-  return min;
-}
+const expected_result = [
+  {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948,
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Duna',
+    genre: 'Ficção Científica',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+];
 
-assert.equal(smallerName(), 'Duna');
+// escreva seu código aqui
+const fantasyOrScienceFiction = () => books.filter((b) => b.genre === 'Fantasia' || b.genre === 'Ficção Científica');
+
+assert.deepEqual(fantasyOrScienceFiction(), expected_result);

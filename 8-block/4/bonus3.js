@@ -1,14 +1,16 @@
 const assert = require('assert');
 
 // ================================================
-const getLargestNumber = (array) => {
-  let largestNumber = 0;
-  for (let i in array) {
-    if (array[i] > largestNumber) largestNumber = array[i];
-  }
-  return largestNumber;
-};
+const getLargestNumber = (arr) => arr.reduce((max, n) => Math.max(max, n));
 // =================================================
+
+const getLargestNumber = (array) => {
+  let largest = 0;
+  for (let i in array) {
+    largest = Math.max(largest, array[i]);
+  }
+  return largest;
+};
 
 const parameter = [45, 8, 2, 50, 1, 7, 99];
 const result = 99;

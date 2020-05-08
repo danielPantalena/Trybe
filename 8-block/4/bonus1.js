@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 // escreva a função factorial para passar nos testes abaixo:
-const factorial = (n) => (n === 0 ? 1 : n * factorial(n - 1));
+const factorialRec = (n) => (n === 0 ? 1 : n * factorialRec(n - 1));
 // ========================================================
 
 const in1 = 5;

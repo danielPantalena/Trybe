@@ -63,15 +63,11 @@ const books = [
   },
 ];
 
-// escreva seu código aqui
-const allNames = () => {
-  let result = books.reduce((str, book) => {
-    return `${str} ${book.author.name},`;
-  }, 'Nomes:');
-  resultArray = result.split('');
-  resultArray.splice(resultArray.length - 1, 1, '.');
-  return resultArray.join('');
-};
+const allNames = () =>
+  `Nomes:${books.reduce((acc, book, i) => {
+    console.log(i);
+    return i > 0 ? `${acc}, ${book.author.name}` : ` ${book.author.name}`;
+  }, '')}.`;
 
 assert.deepEqual(
   allNames(),

@@ -64,11 +64,10 @@ const books = [
 ];
 
 const allNames = () =>
-  `Nomes:${books.reduce(
-    (acc, book, i) =>
-      i > 0 ? `${acc}, ${book.author.name}` : ` ${book.author.name}`,
-    ''
-  )}.`;
+  books.reduce((r, b, i) => {
+    if (i !== Object.keys(books).length - 1) return `${r} ${b.author.name},`;
+    else return `${r} ${b.author.name}.`;
+  }, 'Nomes:');
 
 assert.deepEqual(
   allNames(),

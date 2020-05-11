@@ -64,14 +64,17 @@ const books = [
 ];
 
 // escreva seu código aqui
+// const allNames = () =>
+//   books.reduce(
+//     (r, b, i) =>
+//       i !== Object.keys(books).length - 1
+//         ? `${r} ${b.author.name},`
+//         : `${r} ${b.author.name}.`,
+//     'Nomes:'
+//   );
+
 const allNames = () =>
-  books.reduce(
-    (r, b, i) =>
-      i !== Object.keys(books).length - 1
-        ? `${r} ${b.author.name},`
-        : `${r} ${b.author.name}.`,
-    'Nomes:'
-  );
+  `Nomes: ${books.map((b) => b.author.name).reduce((r, b) => `${r}, ${b}`)}.`;
 
 assert.deepEqual(
   allNames(),

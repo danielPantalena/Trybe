@@ -63,11 +63,19 @@ const books = [
   },
 ];
 
-const expected_result = 43;
+const expected_result = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
 
 // escreva seu código aqui
-const averageAge = () =>
-  books.map((b) => b.releaseYear - b.author.birthYear).reduce((r, b) => r + b) /
-  Object.keys(books).length;
+const longestNamedBook = () =>
+  books.reduce((r, b) => (b.name.length > r.name.length ? b : r));
 
-assert.equal(averageAge(), expected_result);
+assert.deepEqual(longestNamedBook(), expected_result);

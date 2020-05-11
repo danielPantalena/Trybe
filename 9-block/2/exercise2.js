@@ -63,6 +63,7 @@ const books = [
   },
 ];
 
+// escreva seu código aqui
 const allNames = () =>
   books.reduce(
     (r, b, i) =>

@@ -96,7 +96,7 @@ const nameAndAge = () =>
     .map((b) => ({
       age: b.releaseYear - b.author.birthYear,
       author: b.author.name,
-    }))
-    .sort((a, b) => a.age - b.age);
+    }))  // Makes a new array, with objects { age: 'ageValue' , author: 'authorNameValue'}
+    .sort((a, b) => a.age - b.age);  // Sort the array in crescent order by ages
 
 assert.deepEqual(nameAndAge(), expected_result);

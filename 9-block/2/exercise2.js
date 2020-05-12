@@ -74,7 +74,9 @@ const books = [
 //   );
 
 const allNames = () =>
-  `Nomes: ${books.map((b) => b.author.name).reduce((r, b) => `${r}, ${b}`)}.`;
+  `Nomes: ${books
+    .map((book) => book.author.name) // makes a new array with author's names
+    .reduce((allNames, bookAuthorName) => `${allNames}, ${bookAuthorName}`)}.`;
 
 assert.deepEqual(
   allNames(),

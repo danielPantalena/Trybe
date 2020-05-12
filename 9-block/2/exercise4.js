@@ -67,7 +67,8 @@ const expected_result = 43;
 
 // escreva seu código aqui
 const averageAge = () =>
-  books.map((b) => b.releaseYear - b.author.birthYear).reduce((r, b) => r + b) /
-  books.length;
+  books
+    .map((book) => book.releaseYear - book.author.birthYear) // makes a new array with the author's ages
+    .reduce((sumOfAges, age) => sumOfAges + age) / books.length; // Sum of ages divided by number of books
 
 assert.equal(averageAge(), expected_result);

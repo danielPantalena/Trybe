@@ -5,10 +5,7 @@ const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
 const chiron = ['Chiron', 'Bugatti', 2016];
 
 // escreva toObject abaixo
-const toObject = (arr) => {
-  const [name, brand, year] = arr;
-  return { name, brand, year };
-};
+const toObject = ([name, brand, year]) => ({ name, brand, year });
 
 assert.deepEqual(toObject(palio), { name: 'Palio', brand: 'Fiat', year: 2019 });
 assert.deepEqual(toObject(shelbyCobra), {

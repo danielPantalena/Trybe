@@ -74,7 +74,7 @@ const expected_result = [
 const fantasyOrScienceFictionAuthors = () =>
   books
     .filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica') // makes a new array just with the 'Fantasia' and 'Ficção' books
-    .map((filteredBook) => filteredBook.author.name)
-    .sort();
+    .map((filteredBook) => filteredBook.author.name) // makes a new array just with de atuhor names
+    .sort(); 
 
 assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);

@@ -16,14 +16,12 @@ const greet = temperature =>
 const handleError = errorReason =>
   console.log(`Error getting temperature: ${errorReason}`);
 
-const isRobotBusy = () => (Math.floor(Math.random() * 101) < 60 ? false : true);
+const isRobotBusy = () => Math.random() > 0.6;
 
 // definição da função sendMarsTemperature...
 const sendMarsTemperature = (callback, error) => {
   setTimeout(() => {
-    isRobotBusy()
-      ? error('Robot is busy')
-      : callback(getMarsTemperature());
+    isRobotBusy() ? error('Robot is busy') : callback(getMarsTemperature());
   }, messageDelay());
 };
 

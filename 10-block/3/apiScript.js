@@ -32,27 +32,45 @@ const divisions = dividend => [2, 3, 5, 10].map(divisor => dividend / divisor);
 
 const sumArray = arr => arr.reduce((acc, num) => acc + num);
 
+const sumArrayPowTwo = arr => arr.reduce((acc, num) => acc + num ** 2, 0);
+
+const isLT = number => {
+  if (number < 8000) return number;
+  throw new Error('É mais de 8000');
+};
 // Variables
 const arrayNumbers = createArray(10);
 
-const arrSum = arrayNumbers.reduce(
-  (total, number) => total + Math.pow(number, 2),
-  0
-);
+const arrSumPowTwo = sumArrayPowTwo(arrayNumbers);
 
-// Promise
-const myFirstPromise = new Promise((resolve, reject) => {
-  if (arrSum < 8000) resolve(arrSum);
-  else reject(new Error('É mais de 8000, essa promise foi para o reject!'));
-});
+// // PROMISE
+// const myFirstPromise = new Promise((resolve, reject) => {
+//   if (arrSumPowTwo < 8000) resolve(arrSumPowTwo);
+//   else reject(new Error('É mais de 8000, essa promise foi para o reject!'));
+// });
 
-console.log('isLT 8000?', arrSum < 8000);
+// async/await
+const myFirstAsyncAwait = async () => {
+  try {
+    const numberLowerThan = await isLT(arrSumPowTwo);
+    const arrDivisions = divisions(arrSumPowTwo);
+    console.log(sumArray(arrDivisions));
+  } catch (err) {
+    console.log('err.message:', err.message);
+  }
+};
+
+console.log('isLT 8000?', arrSumPowTwo < 8000);
 
 // window.onload
 window.onload = () => {
   fetchJoke(); // call fetch
-  myFirstPromise // call promise
-    .then(divisions)
-    .then(arrDiv => console.log(sumArray(arrDiv)))
-    .catch(err => console.log(err));
+  // PROMISE
+  // myFirstPromise
+  //   .then(divisions)
+  //   .then(arrDiv => console.log(sumArray(arrDiv)))
+  //   .catch(err => console.log('err.message: ', err.message));
+
+  // async/await
+  myFirstAsyncAwait();
 };

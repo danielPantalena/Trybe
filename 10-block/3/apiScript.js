@@ -17,38 +17,42 @@ const addJokeToHtml = jokeMessage => {
   document.getElementById('jokeContainer').appendChild(jokeHTMLelement);
 };
 
+// Functions
 const randomNumber = num => Math.random() * (num - 1) + 1;
 
 const createArray = num => {
   let arr = [];
   for (let i = 0; i < num; i++) {
-    arr.push(Math.pow(randomNumber(50), 2));
+    arr.push(randomNumber(50));
   }
   return arr;
 };
 
+const divisions = dividend => [2, 3, 5, 10].map(divisor => dividend / divisor);
+
+const sumArray = arr => arr.reduce((acc, num) => acc + num);
+
+// Variables
 const arrayNumbers = createArray(10);
 
-const arrSumFun = arr => arr.reduce((total, num) => total + num);
+const arrSum = arrayNumbers.reduce(
+  (total, number) => total + Math.pow(number, 2),
+  0
+);
 
-const arrSum = arrSumFun(arrayNumbers);
-
-
-const isArrSumLowerThan = () => arrSum < 8000;
-
-console.log('isLT 8000?', isArrSumLowerThan());
-
-const p = new Promise((resolve, reject) => {
-  if (isArrSumLowerThan()) resolve('resolved called');
-  else reject('rejected');
+// Promise
+const myFirstPromise = new Promise((resolve, reject) => {
+  if (arrSum < 8000) resolve(arrSum);
+  else reject(new Error('É mais de 8000, essa promise foi para o reject!'));
 });
 
-p.then(message => {
-  console.log(message, 'then called');
-  console.log([arrSum/2, arrSum/3, arrSum/5, arrSum/10]);
-}).catch(err => {
-  console.log(err, 'catch called');
-  console.log('É mais de 8000');
-});
+console.log('isLT 8000?', arrSum < 8000);
 
-window.onload = () => fetchJoke();
+// window.onload
+window.onload = () => {
+  fetchJoke(); // call fetch
+  myFirstPromise // call promise
+    .then(divisions)
+    .then(arrDiv => console.log(sumArray(arrDiv)))
+    .catch(err => console.log(err));
+};

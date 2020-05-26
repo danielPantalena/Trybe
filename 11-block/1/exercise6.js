@@ -15,10 +15,9 @@ const findAnimalByName = name =>
     }, 100);
   });
 
-const getAnimal = async name =>
-  await findAnimalByName(name)
-    .then(animal => animal)
-    .catch(err => err);
+const getAnimal = async name => await findAnimalByName(name);
+// .then(animal => animal)
+// .catch(err => err);
 
 const findAnimalByAge = age =>
   new Promise((resolve, reject) => {
@@ -29,9 +28,8 @@ const findAnimalByAge = age =>
     }, 100);
   });
 
-const getAnimalByAge = age =>
-  findAnimalByAge(age)
-    .then(animals => animals)
-    .catch(err => err);
+const getAnimalByAge = age => findAnimalByAge(age);
+// .then(animals => animals)
+// .catch(err => err);
 
 module.exports = { getAnimal, getAnimalByAge };

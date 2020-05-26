@@ -85,7 +85,7 @@ describe('exercise 6.1', () => {
     test('Retorna um erro', () => {
       expect.assertions(1);
       return getAnimal('Bob').catch(e => {
-        expect(e).toMatch('Nenhum animal com esse nome!');
+        expect(e.error).toEqual('Nenhum animal com esse nome!');
       });
     });
   });
@@ -104,8 +104,8 @@ describe('exercise 6.2', () => {
   describe('Quando não existe o animal com o nome procurado', () => {
     test('Retorna um erro', () => {
       expect.assertions(1);
-      return getAnimalByAge(3).catch(error => {
-        expect(error).toBe('Nenhum animal com essa idade!');
+      return getAnimalByAge(3).catch(err => {
+        expect(err.error).toBe('Nenhum animal com essa idade!');
       });
     });
   });

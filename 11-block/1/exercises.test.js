@@ -45,4 +45,25 @@ describe('exercise3', () => {
 });
 
 // 4
-const getRepos = require('./exercise4')
+const getRepos = require('./exercise4');
+describe('exercise4', () => {
+  test('apiGitHub includes', async () => {
+    const data = await getRepos('https://api.github.com/users/tryber/repos');
+    expect(data.includes('sd-01-week4-5-project-todo-list')).toBe(false);
+    expect(data.includes('sd-01-week4-5-project-meme-generator')).toBe(false);
+  });
+});
+
+// 5
+describe('exercise5', () => {
+  beforeEach(() => console.log('1 - beforeEach')); // before everything
+  afterEach(() => console.log('1 - afterEach')); // after '1 - test' and after everything
+  test('', () => console.log('1 - test')); // after '1 - beforeEach' and before '1 - afterEach'
+
+  describe('Scoped / Nested block', () => {
+    beforeEach(() => console.log('2 - beforeEach')); // after '1 - afterEach' and before '2 - test'
+    afterEach(() => console.log('2 - afterEach')); // after everything inside describe 'Scoped / Nested block'
+
+    test('', () => console.log('2 - test')); // after '2 - beforeEach' and before '2 - afterEach'
+  });
+});

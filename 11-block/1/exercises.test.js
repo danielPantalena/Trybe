@@ -67,3 +67,46 @@ describe('exercise5', () => {
     test('', () => console.log('2 - test')); // after '2 - beforeEach' and before '2 - afterEach'
   });
 });
+
+// 6
+const { getAnimal, getAnimalByAge } = require('./exercise6');
+// 6.1
+describe('exercise 6.1', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimal('Dorminhoco').then(animal => {
+        expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch(e => {
+        expect(e).toMatch('Nenhum animal com esse nome!');
+      });
+    });
+  });
+});
+// 6.2
+describe('exercise 6.2', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimalByAge(1).then(animal => {
+        expect(animal).toEqual([{ name: 'Dorminhoco', age: 1, type: 'Dog' }]);
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimalByAge(3).catch(error => {
+        expect(error).toBe('Nenhum animal com essa idade!');
+      });
+    });
+  });
+});

@@ -15,7 +15,7 @@ const findAnimalByName = name =>
     }, 100);
   });
 
-const getAnimal = async name => await findAnimalByName(name);
+const getAnimal = name => findAnimalByName(name);
 // .then(animal => animal)
 // .catch(err => err);
 

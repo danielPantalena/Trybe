@@ -1,0 +1,8 @@
+.pokemon-class {
+  border: 1px solid black,
+}
+
+.pokedex {
+  display: flex;
+  background-color: green;
+}

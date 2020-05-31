@@ -102,22 +102,34 @@ const pokemons = [
   },
 ];
 
-/* const fetchInsideFetch = async (URL) => {
-  const responseInside = await fetch(URL)
+/* const fetchInsideFetch = async URL => {
+  const responseInside = await fetch(URL);
   const responseInsideJSON = await responseInside.json();
-  console.log(responseInsideJSON)
-  return responseInsideJSON.sprites.front_default;
-}
+  const {
+    name,
+    types,
+    weight: averageWeight,
+    sprites: image,
+  } = responseInsideJSON;
+  const pokemon = { name, types, averageWeight, image };
+  // console.log('pokemon fetchInside:', pokemon)
+  return pokemon;
+};
 
 const fetchApiPoke = async () => {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
+  const response = await fetch(
+    'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0',
+  );
   const responseJSON = await response.json();
-  return responseJSON.results.map((poke) => fetchInsideFetch(poke.url))
-}
+  const pokemonsArray = await responseJSON.results;
+  // console.log('pokemonsArray', pokemonsArray)
+  return pokemonsArray.map(async ({url}) => await fetchInsideFetch(url))
+  // return pokemonsArray;
+};
 
-const pokemonsAPI = fetchApiPoke(); */
+window.onload = async () => {
+  const data = await fetchApiPoke();
+  console.log('data:', data)
+} */
 
 export default pokemons;
-
-
-

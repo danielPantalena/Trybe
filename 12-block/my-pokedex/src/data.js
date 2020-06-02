@@ -102,34 +102,4 @@ const pokemons = [
   },
 ];
 
-/* const fetchInsideFetch = async URL => {
-  const responseInside = await fetch(URL);
-  const responseInsideJSON = await responseInside.json();
-  const {
-    name,
-    types,
-    weight: averageWeight,
-    sprites: image,
-  } = responseInsideJSON;
-  const pokemon = { name, types, averageWeight, image };
-  // console.log('pokemon fetchInside:', pokemon)
-  return pokemon;
-};
-
-const fetchApiPoke = async () => {
-  const response = await fetch(
-    'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0',
-  );
-  const responseJSON = await response.json();
-  const pokemonsArray = await responseJSON.results;
-  // console.log('pokemonsArray', pokemonsArray)
-  return pokemonsArray.map(async ({url}) => await fetchInsideFetch(url))
-  // return pokemonsArray;
-};
-
-window.onload = async () => {
-  const data = await fetchApiPoke();
-  console.log('data:', data)
-} */
-
 export default pokemons;

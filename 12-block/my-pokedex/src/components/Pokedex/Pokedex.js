@@ -4,7 +4,6 @@ import Pokemon from '../Pokemon/Pokemon';
 
 class Pokedex extends React.Component {
   render() {
-    console.log('DEXX props', this.props);
     const { pokemons } = this.props;
     return (
       <div className="pokedex">

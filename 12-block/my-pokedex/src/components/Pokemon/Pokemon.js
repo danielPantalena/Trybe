@@ -3,7 +3,6 @@ import './Pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    console.log('Pokemon props', this.props )
     const { name, type, averageWeight, image } = this.props.pokemon;
     return (
       <div className="pokemon">

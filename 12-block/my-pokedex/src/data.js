@@ -102,22 +102,4 @@ const pokemons = [
   },
 ];
 
-/* const fetchInsideFetch = async (URL) => {
-  const responseInside = await fetch(URL)
-  const responseInsideJSON = await responseInside.json();
-  console.log(responseInsideJSON)
-  return responseInsideJSON.sprites.front_default;
-}
-
-const fetchApiPoke = async () => {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
-  const responseJSON = await response.json();
-  return responseJSON.results.map((poke) => fetchInsideFetch(poke.url))
-}
-
-const pokemonsAPI = fetchApiPoke(); */
-
 export default pokemons;
-
-
-

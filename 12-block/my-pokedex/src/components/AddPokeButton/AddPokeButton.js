@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddPokeButton.css'
 
 class AddPokeButton extends React.Component {
   render() {

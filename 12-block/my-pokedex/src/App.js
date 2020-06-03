@@ -31,6 +31,7 @@ class App extends React.Component {
       return this.setState({
         pokemonsArray: pokemonsObjs,
         buttonDisabled: false,
+        pokemon: [pokemonsObjs[0]],
       });
     }
     const filteredArray = pokemonsObjs.filter(

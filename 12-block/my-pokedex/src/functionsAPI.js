@@ -1,4 +1,4 @@
-const fetchInsideFetch = async (URL) => {
+/* const fetchInsideFetch = async (URL) => {
   const responseInside = await fetch(URL);
   const responseInsideJSON = await responseInside.json();
   const {
@@ -8,7 +8,6 @@ const fetchInsideFetch = async (URL) => {
     sprites: image,
   } = responseInsideJSON;
   const pokemon = { name, types, averageWeight, image };
-  // console.log(pokemon);
   return pokemon;
 };
 
@@ -19,14 +18,4 @@ const fetchApiPoke = async () => {
   const responseJSON = await response.json();
   const pokemonsURLArray = await responseJSON.results;
   return pokemonsURLArray;
-};
-
-/* const printPoke = async () => {
-  const pokemonsArr = await fetchInsideFetch("https://pokeapi.co/api/v2/pokemon/1/")
-  console.log(pokemonsArr);
-}
-
-printPoke(); */
-
-
-export default fetchApiPoke;
+}; */

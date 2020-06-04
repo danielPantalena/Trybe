@@ -56,7 +56,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Pokedex pokemons={this.state.pokemon} />
-        <TypesButtons handleClick={this.filterType} />
+        <TypesButtons handleClick={this.filterType} pokemons={pokemonsObjs} />
         <br />
         <AddPokeButton
           handleClick={this.nextPoke}

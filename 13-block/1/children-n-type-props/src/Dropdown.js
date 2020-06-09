@@ -7,14 +7,12 @@ export default class Dropdown extends Component {
 
     this.state = {
       dropDown: false,
-      // showElement: this.props.list[0].item,
+      showElement: this.props.list[0].item,
     };
   }
 
-  handleDropDown = (event) => {
-    this.setState({ dropDown: !this.state.dropDown });
-    console.log(event.target.innerHTML);
-    console.log(this.state);
+  handleDropDown = (value) => {
+    this.setState({ dropDown: !this.state.dropDown, showElement: value });
   };
 
   render() {
@@ -23,12 +21,12 @@ export default class Dropdown extends Component {
         <div>{this.props.children}</div>
         {this.state.dropDown ? (
           this.props.list.map((element) => (
-            <div key={element.id} onClick={this.handleDropDown}>
+            <div key={element.id} onClick={() => this.handleDropDown(element.item)}>
               {element.item}
             </div>
           ))
         ) : (
-          // <div onClick={this.handleDropDown}>{this.state.showElement}</div>
+          <div onClick={this.handleDropDown}>{this.state.showElement}</div>
         )}
       </React.Fragment>
     );
@@ -37,7 +35,7 @@ export default class Dropdown extends Component {
 
 Dropdown.propTypes = {
   children: PropTypes.string,
-  list: PropTypes.array.isRequired,
+  list: PropTypes.arrayOf(PropTypes.object),
 };
 
 Dropdown.defaultProps = {

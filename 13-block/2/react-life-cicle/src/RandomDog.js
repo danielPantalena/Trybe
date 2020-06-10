@@ -21,12 +21,12 @@ export default class DogsApi extends Component {
     return true;
   }
 
-
   render() {
     const { dog } = this.state;
     return (
       <Fragment>
-        <img src={dog.message} alt="" />
+        {/* isLoading ? <p>Loading...</p> : <img src={dog.message} alt="a dog" /> */}
+        <img src={dog.message} alt="a dog" />
         <button
           onClick={async () => {
             const dog = await this.getDogsApi();

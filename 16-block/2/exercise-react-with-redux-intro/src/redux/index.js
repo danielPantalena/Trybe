@@ -1,6 +1,8 @@
 import { createStore, combineReducers } from 'redux';
 import { CHANGE_SIGNAL } from './actionCreators'; // exercise-one
 import { MOVE_CAR } from './actionCreators'; // exercise-two
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 
 // exercise-one
 const initialStateChangeSignal = {
@@ -44,7 +46,7 @@ const combinedReducers = combineReducers({
 
 const store = createStore(
   combinedReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  composeWithDevTools(),
 );
 
 export default store;

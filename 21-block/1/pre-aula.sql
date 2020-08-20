@@ -25,3 +25,12 @@ SELECT SUBSTRING('Oi, eu sou uma string', 5, 2);
 -- Se a quantidade de caracteres a extrair não for definida,
 -- então a string será extraída do índice inicial definido, até o seu final
 SELECT SUBSTRING('Oi, eu sou uma string', 5);
+
+SELECT UCASE(title) FROM sakila.film LIMIT 10;
+SELECT LCASE(title) FROM sakila.film LIMIT 10;
+SELECT REPLACE(title, 'ACADEMY', 'FOO') FROM sakila.film WHERE film_id = 1;
+SELECT LEFT(title, 7) FROM sakila.film WHERE film_id = 1;
+SELECT RIGHT(title, 8) FROM sakila.film WHERE film_id = 1;
+SELECT LENGTH(title) FROM sakila.film WHERE film_id = 1;
+SELECT SUBSTRING(title, 5, 2) FROM sakila.film WHERE film_id = 1;
+SELECT SUBSTRING(title, 5) FROM sakila.film WHERE film_id = 1;
